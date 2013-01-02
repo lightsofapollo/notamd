@@ -1,0 +1,19 @@
+{
+  "name": "not-amd",
+  "version": "0.0.1",
+  "author": "James Lal",
+  "description": "",
+  "main": "not_here.js",
+  "private": true,
+
+  "dependencies" : {},
+  "devDependencies": {
+    "mocha": "~1.7",
+    "chai": "0.5.2",
+    "test-agent": "~0.8"
+  },
+  "license": "MIT",
+  "engine": {
+    "node": ">=0.4"
+  }
+}

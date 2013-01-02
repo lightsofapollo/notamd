@@ -1,17 +1,16 @@
 {
-  "name": "not-amd",
+  "name": "notamd",
   "version": "0.0.1",
   "author": "James Lal",
-  "description": "",
-  "main": "not_here.js",
-  "private": true,
+  "description": "(Dependancy?) Loader utilities (mostly for browser)",
+  "main": "lib/notamd.js",
 
   "dependencies" : {},
   "devDependencies": {
     "mocha": "~1.7",
     "test-agent": "~0.8"
   },
-  "license": "MIT",
+  "license": "Apache 2",
   "engine": {
     "node": ">=0.4"
   }

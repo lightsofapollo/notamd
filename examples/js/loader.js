@@ -92,6 +92,10 @@
 
   var loader = NotAmd(config);
 
+  loader.onerror = function(err) {
+    console.error('Oops! You fail: ' + err.message);
+  };
+
   function init() {
     loader.load('packages', 'one', function() {
       loader.load('packages', 'two', function() {

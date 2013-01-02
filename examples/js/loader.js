@@ -73,7 +73,7 @@
       }
     },
 
-    packages: {
+    group: {
       'one': {
         js: ['one', 'one_dep']
       },
@@ -97,9 +97,9 @@
   };
 
   function init() {
-    loader.load('packages', 'one', function() {
-      loader.load('packages', 'two', function() {
-        loader.load('packages', 'three', function() {
+    loader.load('group', 'one', function() {
+      loader.load('group', 'two', function() {
+        loader.load('group', 'three', function() {
           console.log('DONE!');
         });
       });

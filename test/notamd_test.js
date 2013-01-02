@@ -134,18 +134,18 @@ suite('notamd', function() {
       };
     });
 
-    suite('packages', function() {
+    suite('group', function() {
       setup(function() {
         config = Object.create(config);
 
-        config.packages = {
+        config.group = {
           one: {
             foo: ['a', 'b'],
             bar: ['c', 'd']
           },
 
           two: {
-            packages: ['one'],
+            group: ['one'],
             foo: ['c'],
             bar: ['e']
           }
@@ -162,9 +162,9 @@ suite('notamd', function() {
         });
       }
 
-      test('no package deps', function(done) {
+      test('no group deps', function(done) {
         subject = NotAmd(config);
-        subject.load('packages', 'one', function() {
+        subject.load('group', 'one', function() {
           assert.deepEqual(
             loaded,
             {
@@ -182,7 +182,7 @@ suite('notamd', function() {
 
       test('interdeps', function(done) {
         subject = NotAmd(config);
-        subject.load('packages', 'two', function() {
+        subject.load('group', 'two', function() {
           assert.deepEqual(
             loaded,
             {
